@@ -75,7 +75,7 @@ Verkefni sett fyrir í fyrirlestri mánudaginn 6. mars 2023.
 
 ## Skil
 
-Skila skal í Canvas í seinasta lagi fyrir lok dags fimmtudaginn 20. mars 2023.
+Skila skal í Canvas í seinasta lagi fyrir lok dags fimmtudaginn 23. mars 2023.
 
 Skil skulu innihalda:
 
