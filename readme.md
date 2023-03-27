@@ -31,8 +31,8 @@ Ef CRA er notað skal nota [react router](https://reactrouter.com/en/main) til a
 Búa skal til a.m.k. fimm componenta sem halda utan um viðeigandi stöðu og taka við gögnum gegnum props:
 
 - `Layout` component sem heldur utan um header, efni og footer á síðu.
-- `Departments` component sem birtir upplýsingar um staka deild.
-- `Department` component sem staka deild og leyfir að eyða henni.
+- `Departments` component sem birtir lista af deildum.
+- `Department` component sem birtir staka deild og leyfir að eyða henni.
 - `Courses` component sem birtir áfanga.
 - Form componenta: `Form`, `Input` og `Button`. Ekki þarf að útbúa sértæka componenta fyrir lengri texta eða tölur fyrir einingar.
 
