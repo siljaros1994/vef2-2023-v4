@@ -1,0 +1,55 @@
+/* Departments.css */
+  
+.departments-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #f6eeee; 
+  }
+  
+  .departments-list-item {
+    font-size: 24px;
+  }
+  
+  .department-form-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #f6eeee; 
+  }
+  
+  button.delete-department {
+    background-color: #f6edee;
+    border-color: #f6e9ea;
+    margin-left: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0070f3;
+  }
+  
+  li a:hover {
+    color: #0366d6;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #666666;
+  }
+  
+  p.Loading {
+    font-weight: bold;
+    color: #333333;
+  }
