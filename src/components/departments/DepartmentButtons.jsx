@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { generateApiUrl } from "../../utils/generateApiUrl";
-import { API_URL as URL } from "./Departments";
 import { NavLink } from 'react-router-dom';
 import './DepartmentButtons.css';
 
@@ -10,7 +9,7 @@ function DepartmentButtons({ state, slug, setState }) {
 
   async function updateTitle() {
     try {
-      const apiUrl = generateApiUrl(URL, `/departments/${slug}`);
+      const apiUrl = generateApiUrl(`/departments/${slug}`);
 
       const response = await fetch(apiUrl, {
         method: "PATCH",
@@ -37,7 +36,7 @@ function DepartmentButtons({ state, slug, setState }) {
         throw new Error("Slug is not defined");
       }
 
-      const apiUrl = generateApiUrl(URL, `/departments/${slug}`);
+      const apiUrl = generateApiUrl(`/departments/${slug}`);
 
       const response = await fetch(apiUrl, {
         method: "PATCH",
@@ -64,7 +63,7 @@ function DepartmentButtons({ state, slug, setState }) {
         throw new Error("Slug is not defined");
       }
 
-      const apiUrl = generateApiUrl(URL, `/departments/${slug}`);
+      const apiUrl = generateApiUrl(`/departments/${slug}`);
 
       const response = await fetch(apiUrl, {
         method: "DELETE",
