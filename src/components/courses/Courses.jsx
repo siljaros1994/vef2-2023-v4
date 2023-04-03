@@ -1,18 +1,21 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { useParams } from 'react-router-dom';
 import { generateApiUrl } from "../../utils/generateApiUrl";
 import './Courses.css';
 
-const Courses = ({ titleName }) => {
-  const { slug } = useParams();
+const Courses = ({ titleName, departmentSlug }) => {
   const [state, setState] = useState("empty");
   const [courses, setCourses] = useState([]);
 
   const fetchData = useCallback(async () => {
+    if (!departmentSlug) {
+      return;
+    }
+
     setState("loading");
 
     try {
-      const url = generateApiUrl(`/departments/${slug}/courses`);
+      const url = generateApiUrl(`/departments/${departmentSlug}/courses`);
+      console.log("Generated URL:", url);
       const response = await fetch(url);
 
       if (!response.ok) {
@@ -26,11 +29,13 @@ const Courses = ({ titleName }) => {
       setState("error");
       console.log(e);
     }
-  }, [slug]);
+  }, [departmentSlug]);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    if (departmentSlug) {
+      fetchData();
+    }
+  }, [fetchData, departmentSlug]);
 
   async function deleteCourse(courseId) {
     try {
@@ -43,7 +48,6 @@ const Courses = ({ titleName }) => {
         throw new Error("not ok");
       }
 
-      // Refetch courses after successful deletion
       fetchData();
     } catch (e) {
       console.log(e);
@@ -53,7 +57,7 @@ const Courses = ({ titleName }) => {
   return (
     <section>
       <h3>{titleName}</h3>
-      <h2>{slug}</h2>
+      <h2>{departmentSlug}</h2>
       {state === "empty" && <p>veldu deild hér að ofan</p>}
       {state === "error" && <p>Villa við að sækja námskeið.</p>}
       {state === "loading" && <p>Loading...</p>}
