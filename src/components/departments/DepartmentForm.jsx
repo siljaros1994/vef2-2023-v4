@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { API_URL as URL } from "./Departments";
 import { generateApiUrl } from "../../utils/generateApiUrl";
 import './Departments.css';
+import './DepartmentForm.css';
 
 export function DepartmentForm() {
   const [state, setState] = useState('empty');
