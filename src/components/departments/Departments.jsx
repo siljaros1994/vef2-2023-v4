@@ -15,8 +15,8 @@ export function Departments({titleName}) {
   const fetchDepartments = useCallback(async () => {
     setState("loading");
     try {
-      const url = new URL("departments", API_URL);
-      const response = await fetch(`${API_URL}departments`);
+      const url = generateApiUrl("/departments");
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error("not ok");
