@@ -17,9 +17,17 @@
   }
   
   button.delete-department {
-    background-color: #f6edee;
-    border-color: #f6e9ea;
-    margin-left: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
   }
   
   ul {
@@ -37,11 +45,11 @@
   li a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: #0070f3;
+    color: #f2f6fa;
   }
   
   li a:hover {
-    color: #0366d6;
+    color: #7ed603;
   }
   
   p {
