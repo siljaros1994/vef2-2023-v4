@@ -72,6 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Keyrsla
 
+keyra þarf sýnilausnina hans Óla npm run dev
+
 cd vef2-2023-v4
 
 npm start
