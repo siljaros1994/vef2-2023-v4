@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router";
+import { CourseForm } from './CourseForm'; 
 import './Course.css';
 
 export function Course() {
   const [state, setState] = useState('empty');
   const [course, setCourse] = useState(null);
-  const { courseId } = useParams();
+  const { courseId, slug } = useParams();
 
   const URL = process.env.REACT_APP_API_URL;
 
@@ -44,7 +45,7 @@ export function Course() {
           <p>{course.description}</p>
         </>
       )}
-      <CourseForm />
+      <CourseForm departmentSlug={slug} fetchCourses={fetchCourse} />
     </section>
   );
 }
