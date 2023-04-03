@@ -75,3 +75,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 cd vef2-2023-v4
 
 npm start
+
+### railway
+You can now view vef2-2023-v4 in the browser.
+
+Local:            http://localhost:6747
+
+On Your Network:  http://172.17.2.113:6747
+
+npm run build:
+
+http://localhost:3000 
+
+http://192.168.1.2:3000/
